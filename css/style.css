@@ -93,6 +93,9 @@
             gap: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .btn:hover {
@@ -102,6 +105,7 @@
 
         .btn i {
             color: var(--primary-color);
+            font-size: 25px;
         }
         .btn .whatsapp {
             color: var(--whatsapp);
