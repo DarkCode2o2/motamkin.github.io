@@ -1,0 +1,263 @@
+:root {
+            --primary-color: #d4a373; /* لون النصوص البني */
+            --bg-color: #f5ebe0;      /* لون الخلفية الكريمي */
+            --button-bg: #ffffff;    /* لون خلفية الأزرار */
+            --text-dark: #5e503f;    /* لون الخط الداكن */
+            --blue:#0093E9;
+            --whatsapp: #25D366;
+            --snapchat: #f3ee01;
+        }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* الهيدر والشعار */
+        header {
+            padding-top: 20px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .avatar-sec {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+          background-color: #fdfdfd85;
+        }
+        .avatar-sec h2 {
+          font-size: 35px;
+        }
+        .avatar-sec p {
+          font-size: 20px;
+        }
+        /* صورة الشخصية كرتونية */
+        .avatar {
+            width: 300px;
+            margin: 20px 0;
+        }
+
+        /* شبكة الأزرار العلوي */
+        .button-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 50px;
+        }
+
+        .btn {
+            background: var(--button-bg);
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 12px 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .btn i {
+            color: var(--primary-color);
+        }
+        .btn .whatsapp {
+            color: var(--whatsapp);
+        }
+        .btn .phone {
+            color: orange;
+        }
+        .btn .snapchat {
+            color: var(--snapchat);
+        }
+
+        /* أقسام المحتوى */
+        section {
+            margin-top: 60px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            text-align: right;
+            display: inline-block;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-list li i {
+            color: var(--primary-color);
+            background: #fff;
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 12px;
+        }
+
+        /* تذييل الصفحة */
+        footer {
+            margin-top: 80px;
+            padding-bottom: 40px;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        /* تخصيص المسافات لتبدو مثل الصورة */
+        .white-section {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px 20px;
+            margin: 40px -20px;
+        }
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  flex-direction: column;
+   font-size: 50px;
+   position: fixed;
+   left: 10px;
+   width: 40px;
+   height: 40px;
+   bottom: 100px;
+   z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    text-decoration: none;
+  }
+.icons a {
+  line-height: 0;
+}
+.icons i {
+  font-size: 40px;
+}
+
+.icons .phone {
+  font-size: 30px;
+}
+
+.icons .snapchat {
+  transition: .3s;
+  animation-name: snapchat;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  color: var(--snapchat);
+  border-radius: 50%;
+
+}
+
+@keyframes snapchat {
+    0% {
+        box-shadow: 0 0 0 0 rgb(205, 220, 2);
+    }
+    80% {
+        box-shadow: 0 0 0 14px rgba(0, 136, 204, 0);
+    }
+}
+.snapchat:hover {
+    transform: scale(1.1);
+}
+
+.icons .whatsapp {
+  transition: .3s;
+  animation-name: whatsapp;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  color: var(--whatsapp);
+     border-radius: 50%;
+
+}
+
+@keyframes whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(2, 246, 112, 0.5);
+    }
+    80% {
+        box-shadow: 0 0 0 14px rgba(0, 136, 204, 0);
+    }
+}
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+
+.icons .phone {
+  transition: .3s;
+  animation-name: phone;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  color: orange;
+  border-radius: 50%;
+
+}
+
+@keyframes phone {
+    0% {
+        box-shadow: 0 0 0 0 rgba(250, 79, 0, 0.587);
+    }
+    80% {
+        box-shadow: 0 0 0 14px rgba(0, 136, 204, 0);
+    }
+}
+.phone:hover {
+    transform: scale(1.1);
+}
