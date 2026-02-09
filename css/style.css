@@ -46,6 +46,51 @@
             font-weight: bold;
         }
 
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+
+thead {
+  background-color: var(--primary-color);
+}
+
+th {
+    font-size: 15px;
+}
+
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 100%;
+}
+
+tbody tr {
+    cursor: pointer;
+    transition: .3s;
+}
+
+tbody tr:hover {
+    background-color: #fafafa;
+}
+
+tbody {
+    background-color: var(--button-bg);
+}
+
         .subtitle {
             font-size: 20px;
             font-weight: 500;
