@@ -74,16 +74,22 @@
         /* شبكة الأزرار العلوي */
         .button-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 10px;
             margin-bottom: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .button-grid{
+                grid-template-columns: 1fr;
+            }
         }
 
         .btn {
             background: var(--button-bg);
             color: var(--text-dark);
             text-decoration: none;
-            padding: 12px 10px;
+            padding: 12px 8px;
             border-radius: 8px;
             font-size: 13px;
             font-weight: 700;
@@ -98,6 +104,7 @@
             align-items: center;
         }
 
+
         .btn:hover {
             transform: scale(1.02);
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -110,8 +117,8 @@
         .btn .whatsapp {
             color: var(--whatsapp);
         }
-        .btn .phone {
-            color: orange;
+        .btn .gavel {
+            color: var(--primary-color);
         }
         .btn .snapchat {
             color: var(--snapchat);
@@ -192,7 +199,7 @@
   font-size: 40px;
 }
 
-.icons .phone {
+.icons .gavel {
   font-size: 30px;
 }
 
@@ -243,25 +250,25 @@
 }
 
 
-.icons .phone {
+.icons .gavel {
   transition: .3s;
-  animation-name: phone;
+  animation-name: gavel;
   animation-duration: 1.5s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
-  color: orange;
+  color: var(--primary-color);
   border-radius: 50%;
 
 }
 
-@keyframes phone {
+@keyframes gavel {
     0% {
-        box-shadow: 0 0 0 0 rgba(250, 79, 0, 0.587);
+        box-shadow: 0 0 0 0 rgba(153, 49, 0, 0.968);
     }
     80% {
         box-shadow: 0 0 0 14px rgba(0, 136, 204, 0);
     }
 }
-.phone:hover {
+.gavel:hover {
     transform: scale(1.1);
 }
